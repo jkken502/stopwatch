@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+</head>
+<body>
+    <div id="container" class="stopwatch">
+        <div id="display" class="stopwatch" style="padding:5px">
+        </div>
+        <div id="controls" class="stopwatch">
+            <button id="start">Start</button><button id="stop">Stop</button><button id="reset">Reset</button>
+        </div>
+    </div>
+    
+    <script type="module">
+        import {Stopwatch} from './class_stopwatch.js';
+        let display,startButton,stopButton,resetButton,stopwatch;
+        display = document.querySelector( "#display" );
+        startButton = document.querySelector( "#start" );
+        stopButton = document.querySelector( "#stop" );
+        resetButton = document.querySelector( "#reset" );
+        stopwatch = new Stopwatch( display , startButton , stopButton , resetButton );
+    </script>
+</body>
+</html>
